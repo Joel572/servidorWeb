@@ -1,6 +1,6 @@
 /* Definicions de classes utils genèriques */
-.desktop { display: flex !important; }
-.mobile  { display: flex !important; }
+.desktop { display: flex !important;}
+.mobile  { display: flex !important;}
 @media only screen and (max-device-width: 599px) { .desktop { display: none !important; } }
 @media only screen and (min-device-width: 600px) { .mobile  { display: none !important; } }
 .flex       { display: flex; }
@@ -11,54 +11,139 @@
 .botoIcona  { cursor: pointer; }
 
 /* Definicions específiques */
-table, th, td {
+table {
     border-collapse: collapse;
     border: 1px solid black;
 }
-
-.botoMenu {
-    color: blue;
-    cursor: pointer;
-    margin: 0 16px;
+th {
+    background-color: blue;
+    color: white;
 }
-
-.botoMenu:hover {
-    text-decoration: underline;
+td {
+    border-collapse: collapse;
+    border: 2px black;
 }
-
 body {
     font-family: "Open Sans";
 }
+body > div {
+    display: none;
+}
+a {
+    color: white;
+}
+a:visited{
+    color: white;
+}
 
-body > #frontendHome {
+#frontendHome {
     display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+#frontendMenuWeb{
+    background-color: #00C4FF;
+    height: 50px;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    -webkit-box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+    box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);        
+}
+#frontendMenuMobil{
+    background-color: #00C4FF; 
+    height: 110px;
+    position: sticky;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: right;
+    border: 2px solid white;
+    overflow: hidden;
+    height: 25px;
+}
+#frontendPresentacio{
+    background: #D8D8D8;
+    height: 100%;
+}
+.letrapresentacion{
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    position: relative;
+}
+.letrapresentacion2{
+    width: 100%;
+    margin-top: 60px;
+    position: absolute;
+    text-align: center;
+}
+.divtabla{
+    margin-left: 10px;
+}
+.tablapresentacion{
+    position: absolute;
+    margin-top: 120px;
+    margin-left: auto;
+}
+#frontendContacte{
+    background-color:#00C4FF;
+    height: 100%;
 }
 
-body > #frontendPresentacio {
-    display: none;
+.mapa{
+    margin-top: 20px;
+    margin-right: 200px;
+    margin-left: 70px;
+}
+.contacte{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+    font-size: large;
+}
+#frontendProductes{
+    
+}
+.seccion1{
+    background: url("/web/imatges/hotel2.png") center / cover;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+.seccion2{
+    margin: 8px;
+    margin: 0px;
+    height: 413px;
+    background: url("/web/imatges/hotel1.png") center / cover;
+}
+.letraseccion2{
+    color: white;
+    font-size: x-large;
+    text-align: center;
 }
 
-body > #frontendProductes {
-    display: none;
+.botoMenu {
+    color: white;
+    cursor: pointer;
+    margin: 0 16px;
+    min-width: 160px;
+}
+.botoMenu:hover {
+    font-size: large;
+    color: blue;
+}
+.nomempresa{
+    color: white;
+    font-family: Anton;
 }
 
-body > #frontendProductes > #productesContinguts {
+#productesContinguts {
     width: 100%;
 }
-
-body > #frontendContacte {
-    display: none;
-}
-
-body > #backofficeUsuaris {
-    display: none;
-}
-
-body > #backofficeProductes {
-    display: none;
-}
-
-body > #popups {
+#popups {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     display: none;
@@ -69,11 +154,43 @@ body > #popups {
     height: 100%;
     width: 100%;
 }
-
 #popups > div {
     border: solid 1px black;
     background-color: lightcyan;
     display: none;
 }
+.demo-card-wide.mdl-card {
+    width: 512px;
+    margin: 40px;
+    -webkit-box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+    box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+}
+.demo-card-wide > .mdl-card__title {
+    color: white;
+    height: 176px;
+    background: url("/web/imatges/vuelos.png") center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: white;
+}
 
-
+.demo-card-wide1.mdl-card {
+    width: 512px;
+    margin: 40px;
+    -webkit-box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+    box-shadow: 3px 6px 16px 5px rgba(0,0,0,0.75);
+}
+.demo-card-wide1 > .mdl-card__title {
+    color: white;
+    height: 176px;
+    background: url("/web/imatges/playaatardecer.png") center / cover;
+}
+.demo-card-wide1 > .mdl-card__menu {
+    color: white;
+}
+.letraproductos{
+    color: black;
+    text-align: center;
+}

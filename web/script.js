@@ -38,3 +38,15 @@ function iniciaSeccio(seccio) {
     }
 }
 
+
+function mostraMenu () {
+    let ref = document.getElementById('frontendMenuMobil'),
+        estilo = window.getComputedStyle(ref, ''),
+        alto = parseInt(estilo.getPropertyValue('height'), 10)
+
+    if (alto > 25) {
+        ref.style.height = '25px'
+    } else {
+        ref.style.height = 'auto'
+    }
+}

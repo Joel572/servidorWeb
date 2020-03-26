@@ -1,12 +1,14 @@
 <html>
     <head>
         <meta charset='utf-8'/>
-        <title>Títol de la pàgina</title>
+        <title>Vols Joel</title>
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap'>
         <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
         <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'>
         <link rel='stylesheet' href='/web/estils.css'>
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src='https://code.getmdl.io/1.3.0/material.min.js' defer></script>
         <script src='/web/script-login.js'></script>
         <script src='/web/script-navegacio.js'></script>
@@ -15,49 +17,124 @@
         <script src='/web/script-seccio-frontendproductes.js'></script>
         <script src='/web/script-utils.js'></script>
         <script src='/web/script.js'></script>
-
-        <!-- Icones d'aplicació per a navegadors d'escriptori, webapps iOS i webapps Android -->
-        <!-- Icones generats amb: https://www.favicon-generator.org/ -->
-        <link href="/web/appicons/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-        <link href="/web/appicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/web/appicons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <link href="/web/appicons/manifest.json" rel="manifest">
     </head>
     <body onload='inicia()'>
         <div id='frontendMenuWeb' class='flexRow desktop'>
-            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>Inici</div>
+            <div class='nomempresa'>Vols Joel</div>
+            <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>
+                <i class="material-icons">home</i>
+            </div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productes</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendContacte")'>Contacte</div>
-            <div id='botoLoginWeb' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login backoffice</div>
+            <div id='botoLoginWeb' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login</div>
             <div id='botoGestioUsuarisWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestió usuaris</div>
             <div id='botoGestioProductesWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
             <div id='botoLogoutWeb' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
         <div id='frontendMenuMobil' class='flexColumn mobile'>
+            <div class='botoMenu'>
+                <i onclick='mostraMenu()' class="material-icons">menu</i>
+            </div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>Inici</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productes</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendContacte")'>Contacte</div>
-            <div id='botoLoginMobil' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login backoffice</div>
+            <div id='botoLoginMobil' class='botoMenu' onclick='popups.mostraPopup("popupLogin")'>Login</div>
             <div id='botoGestioUsuarisMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestió usuaris</div>
             <div id='botoGestioProductesMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
             <div id='botoLogoutMobil' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
         <div id='frontendHome'>
-            Pàgina principal
+            <div class="seccion1">
+              <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text"><b>Los mejores precios</b></h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Disfruta dels millors vols a preus baixos i les millors destinacions.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a href="" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Ves
+                  </a>
+                </div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="demo-card-wide1 mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text"><b>Tot a meitat de preu</b></h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Ofertes increibles
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      Ves
+                    </a>
+                  </div>
+                  <div class="mdl-card__menu">
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                      <i class="material-icons">share</i>
+                    </button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="seccion2">
+              <div class="letraseccion2"><b>Els millors preus a les millors ciutats</b></div>
+            </div>
         </div>
         <div id='frontendPresentacio'>
-            Pàgina amb una presentacio de l'empresa
-        </div>
+            <h3 class="letrapresentacion">Qui Som?</h3>
+            <div class="letrapresentacion2">Hola, nosaltres som una  nova empresa de vols creada al 2019<br>
+              Tenim grans ofertes per a tu:
+            </div>
+              <div class="divtabla">
+                <table class="tablapresentacion">
+                  <tr>
+                    <th>Vols</th>
+                    <th>Preus</th>
+                    <th>Data</th>
+                  </tr>
+                  <tr>
+                    <td>Barcelona-Madrid</td>
+                    <td>50€/Persona</td>
+                    <td>17/03/2020-23/03/2020</td>
+                  </tr>
+                  <tr>
+                    <td>Barcelona-Valencia</td>
+                    <td>60€/Persona</td>
+                    <td>20/03/2020-30/03/2020</td>
+                  </tr>
+                  <tr>
+                    <td>Barcelona-Roma</td>
+                    <td>70€/Persona</td>
+                    <td>5/04/2020-15/04/2020</td>
+                  </tr>
+                </table>
+              </div>
+          </div>
         <div id='frontendProductes'>
             <div id='productesLoading'>Carregant productes ...</div>
             <div id='productesContinguts' class='flexColumn'></div>
         </div>
         <div id='frontendContacte'>
-            Pàgina amb informacio de contacte
+            <div class="contacte">
+              <div>Contacta'ns a les nostres xarxes</div>
+              <a href="https://es-es.facebook.com/">Facebook</a><br>
+              <a href="https://twitter.com/?lang=es">Twitter</a><br>
+              <a href="https://www.instagram.com/?hl=es">Instagram</a>
+              <div>O envia un correu a:</div>
+              <div>smx.joelpl@gmail.com</div>
+            </div>
+
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3426586343967!2d2.0156033155240207!3d41.32316167927011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49cf2aaf19807%3A0x2736ab5b46fbd471!2sInstitut%20Torre%20Roja!5e0!3m2!1ses!2ses!4v1583832201931!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
         <div id='backofficeUsuaris'>
             <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>
