@@ -99,9 +99,11 @@
               <div class="divtabla">
                 <table class="tablapresentacion">
                   <tr>
-                    <th>Vols</th>
-                    <th>Preus</th>
-                    <th>Data</th>
+                    <thead>
+                      <th>Vols</th>
+                      <th>Preus</th>
+                      <th>Data</th>
+                    </thead>
                   </tr>
                   <tr>
                     <td>Barcelona-Madrid</td>
@@ -122,7 +124,7 @@
               </div>
           </div>
         <div id='frontendProductes'>
-            <div id='productesLoading'>Carregant productes ...</div>
+            <h3 id='productesLoading'>Carregant productes ...</h3>
             <div id='productesContinguts' class='flexColumn'></div>
         </div>
         <div id='frontendProducte'>
@@ -150,42 +152,46 @@
         </div>
         <div id='popups' onclick='popups.amagaAmbClick(event)'>
             <div id='popupLogin' class='flexColumn'>
-                <div>Email:</div>
-                <input id='loginCorreu' type='text' class='halfWidth' />
-                <div>Codi:</div>
-                <input id='loginCodi' type='password' class='halfWidth' />
-                <br/>
-                <input type='button' value='entra' class='halfWidth' onclick='login.autenticaAmbFormulari()' />
-                <div id='loginLoading' class='none'>Carregant ...</div>
-                <div id='loginError' class='none'>Error al fer login ...</div>
-            </div>
-            <div id='popupBackofficeUsuaris' class='flexColumn'>
-                <div>Id:</div>
-                <div id='backofficeUsuarisId'></div>
-                <div>Correu:</div>
-                <input id='backofficeUsuarisCorreu' type='text' value=''/>
-                <div>Nom:</div>
-                <input id='backofficeUsuarisNom' type='text' value=''/>
-                <div>Tipus:</div>
-                <select id='backofficeUsuarisTipus'>
-                    <option>admin</option>
-                    <option>normal</option>
-                </select>
-                <div>Codi:</div>
-                <input id='backofficeUsuarisCodi' type='text' value=''/>
-                <div>Imatge:</div>
-                <div class='flex flexRow'>
-                    <img id='backofficeUsuarisImg' src='/web/imatges/transparent.png' width='100'/>
-                    <input id='backofficeUsuarisArxiu' class="dropFile" accept="image/*" type="file" onchange="seccioBackofficeUsuaris.mostraImatge()" />
+                <div class="loginusuaris">
+                  <div>Email:</div>
+                  <input id='loginCorreu' type='text' class='halfWidth' />
+                  <div>Codi:</div>
+                  <input id='loginCodi' type='password' class='halfWidth' />
+                  <br/>
+                  <input type='button' value='entra' class='halfWidth' onclick='login.autenticaAmbFormulari()' />
+                  <div id='loginLoading' class='none'>Carregant ...</div>
+                  <div id='loginError' class='none'>Error al fer login ...</div>
                 </div>
+              </div>
+            <div id='popupBackofficeUsuaris' class='flexColumn'>
+                <div class="nuevousuario">
+                  <div>Id:</div>
+                  <div id='backofficeUsuarisId'></div>
+                  <div>Correu:</div>
+                  <input id='backofficeUsuarisCorreu' type='text' value=''/>
+                  <div>Nom:</div>
+                  <input id='backofficeUsuarisNom' type='text' value=''/>
+                  <div>Tipus:</div>
+                  <select id='backofficeUsuarisTipus'>
+                      <option>admin</option>
+                      <option>normal</option>
+                  </select>
+                  <div>Codi:</div>
+                  <input id='backofficeUsuarisCodi' type='text' value=''/>
+                  <div>Imatge:</div>
+                  <div class='flex flexRow'>
+                      <img id='backofficeUsuarisImg' src='/web/imatges/transparent.png' width='100'/>
+                      <input id='backofficeUsuarisArxiu' class="dropFile" accept="image/*" type="file" onchange="seccioBackofficeUsuaris.mostraImatge()" />
+                  </div>
                 
-                <br/>
-                <input type='button' value='Guarda' onclick='seccioBackofficeUsuaris.guardaDadesUsuariAlServidor()'/>
-                <br/>
-                <input id='backofficeUsuarisBotoEsborra' type='button' value='Esborra l&#39;usuari' onclick='seccioBackofficeUsuaris.esborraUsuariDelServidor()' />
-                <div id='backofficeUsuarisPopupLoading' class='none'>Carregant ...</div>
-                <div id='backofficeUsuarisPopupError' class='none'>Error al guardar les dades ...</div>
-            </div>
+                  <br/>
+                  <input type='button' value='Guarda' onclick='seccioBackofficeUsuaris.guardaDadesUsuariAlServidor()'/>
+                  <br/>
+                  <input id='backofficeUsuarisBotoEsborra' type='button' value='Esborra l&#39;usuari' onclick='seccioBackofficeUsuaris.esborraUsuariDelServidor()' />
+                  <div id='backofficeUsuarisPopupLoading' class='none'>Carregant ...</div>
+                  <div id='backofficeUsuarisPopupError' class='none'>Error al guardar les dades ...</div>
+                </div>
+              </div>
         </div>
     </body>
 </html>

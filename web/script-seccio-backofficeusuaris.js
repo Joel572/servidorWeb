@@ -30,6 +30,7 @@ class ObjSeccioBackofficeUsuaris {
             navegacio.dadesSeccio = objRebut.missatge
 
             codiHTML = codiHTML + '<table>'
+            codiHTML = codiHTML + '<thead>'
             codiHTML = codiHTML + '<tr>'
             codiHTML = codiHTML + '<td></td>'
             codiHTML = codiHTML + '<td>Id</td>'
@@ -38,6 +39,7 @@ class ObjSeccioBackofficeUsuaris {
             codiHTML = codiHTML + '<td>Tipus</td>'
             codiHTML = codiHTML + '<td></td>'
             codiHTML = codiHTML + '</tr>'
+            codiHTML = codiHTML + '</thead>'
             for (cntUsuari = 0; cntUsuari < navegacio.dadesSeccio.length; cntUsuari = cntUsuari + 1) {
                 valor = navegacio.dadesSeccio[cntUsuari]
                 codiHTML = codiHTML + '<tr>'
